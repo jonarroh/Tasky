@@ -1,0 +1,13 @@
+{
+	"short_name": "svelte-pwa",
+	"name": "Tasky",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "Tasky.svg",
+			"type": "image/svg+xml",
+			"sizes": "512x512"
+		}
+	],
+	"description": "A todo app to me"
+}
