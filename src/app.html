@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#1E1E1E" />
 		<link
 			rel="manifest"
 			crossorigin="use-credentials"
@@ -11,7 +12,10 @@
 		/>
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body
+		data-sveltekit-preload-data="hover"
+		class="bg-[#F6ECC9] dark:bg-[#1e1e1e]"
+	>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

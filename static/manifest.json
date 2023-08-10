@@ -1,13 +1,18 @@
 {
-	"short_name": "svelte-pwa",
+	"short_name": "Tasky",
 	"name": "Tasky",
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "Tasky.svg",
+			"src": "favicon.ico",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		}
 	],
+	"theme_color": "#1e1e1e",
+	"background_color": "#1e1e1e",
+	"display": "standalone",
+	"maskable": true,
+	"maskable_icon": true,
 	"description": "A todo app to me"
 }

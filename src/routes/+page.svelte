@@ -1,59 +1,28 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+  
+  import { DarkMode } from 'flowbite-svelte';
+  let btnClass = 'text-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+  <header class="flex justify-between items-center bg-white dark:bg-gray-800 p-4"
+  
+  >
+    <section class="flex  items-center">
+      <img src="/Tasky.svg" alt="logo" width="40" height="40">
+    <h1
+    class="text-2xl font-bold text-gray-800 dark:text-white ml-2"
+    >Tasky</h1>
+    </section>
+    <section>
+      <DarkMode {btnClass} />
+    </section>
+  </header>
+  <article>
+    <h2 class="text-6xl md:text8xl  text-gray-800 dark:text-white ml-2 whitespace-pre py-8 px-4 " >
+      My list of<span class="block text-4xl md:text-6xl text-gray-800 dark:text-white mt-2 whitespace-pre">
+        tasks
+      </span>
+    </h2>
+  </article>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
