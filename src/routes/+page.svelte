@@ -1,28 +1,54 @@
 <script>
-  
-  import { DarkMode } from 'flowbite-svelte';
-  let btnClass = 'text-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
+  import ButtonOpcions from '$lib/images/components/ButtonOpcions.svelte';
+import Card from '$lib/images/components/Card.svelte';
+import Title from '$lib/images/components/Title.svelte';
+import { Icon } from 'flowbite-svelte-icons';
+ 
 </script>
 
 <section>
-  <header class="flex justify-between items-center bg-white dark:bg-gray-800 p-4"
-  
-  >
-    <section class="flex  items-center">
-      <img src="/Tasky.svg" alt="logo" width="40" height="40">
-    <h1
-    class="text-2xl font-bold text-gray-800 dark:text-white ml-2"
-    >Tasky</h1>
-    </section>
-    <section>
-      <DarkMode {btnClass} />
-    </section>
-  </header>
-  <article>
-    <h2 class="text-6xl md:text8xl  text-gray-800 dark:text-white ml-2 whitespace-pre py-8 px-4 " >
-      My list of<span class="block text-4xl md:text-6xl text-gray-800 dark:text-white mt-2 whitespace-pre">
-        tasks
-      </span>
-    </h2>
-  </article>
+  <div class="py-8 px-4">
+    
+  <Title />
+  <section class="mt-2">
+   
+    <ButtonOpcions text="Create new tasky" href="/task" />
+    
+      <ButtonOpcions text="Watch all taskys" href="/error" />
+    
+  </section>
+  <section class="mt-8 flex gap-2">
+    
+    
+    <Card isLeft={true} text="Task for" secondaryText="The day">
+      <div class="bg-orange-800 rounded-full px-4  h-10 flex justify-start items-center mt-2">
+        <Icon name="check-circle-solid" class=" text-white"  />
+        <p
+        class="text-slate-100 text-sm ml-2 font-bold"
+        >Create a new library</p>
+      </div>
+      <div class="bg-orange-800 rounded-full px-4  h-10 flex justify-start items-center mt-2">
+        <Icon name="check-circle-solid" class=" text-gray-500"  />
+        <p
+        class="text-gray-500 text-sm ml-2 font-bold line-through leading-snug"
+        >Wake Up and eat</p>
+      </div>
+      <div class="bg-orange-800 rounded-full px-4  h-10 flex justify-start items-center mt-2">
+        <Icon name="check-circle-solid" class=" text-gray-500"  />
+        <p
+        class="text-gray-500 text-sm ml-2 font-bold line-through leading-snug"
+        >Go to the University</p>
+      </div>
+    </Card>
+       
+        <Card isLeft={false} text="Image" secondaryText="Notes">
+          <div class="w-full flex justify-center">
+            <img src="/cat.png" alt="cat" width="150" height="150" />
+          </div>
+          </Card>
+      
+    
+  </section>
+  </div>
 </section>
+
