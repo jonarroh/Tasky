@@ -10,17 +10,17 @@ import { Icon } from 'flowbite-svelte-icons';
   <div class="py-8 px-4">
     
   <Title />
-  <section class="mt-2">
+  <section class="mt-8">
    
     <ButtonOpcions text="Create new tasky" href="/task" />
     
       <ButtonOpcions text="Watch all taskys" href="/error" />
     
   </section>
-  <section class="mt-8 flex gap-2">
+  <section class="mt-8 flex gap-4">
     
     
-    <Card isLeft={true} text="Task for" secondaryText="The day">
+    <Card isLeft={true} text="Task for" secondaryText="The day" href="/dayTasks">
       <div class="bg-orange-800 rounded-full px-4  h-10 flex justify-start items-center mt-2">
         <Icon name="check-circle-solid" class=" text-white"  />
         <p

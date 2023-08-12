@@ -59,6 +59,7 @@
   <label
   class="block text-md font-medium text-dark dark:text-white mt-4"
   >
+  Description
    <textarea rows="3"
     class="rounded-lg border border-neutral-950 dark:border-white py-2 px-4 w-full bg-transparent
     focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent
@@ -74,6 +75,7 @@
 <label 
    class="block text-md font-medium text-dark dark:text-white mt-4"
    >
+   Due Date
   <input type="date" 
   class="rounded-full border border-neutral-950 dark:border-white py-2 px-4 w-full bg-transparent
   focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent
