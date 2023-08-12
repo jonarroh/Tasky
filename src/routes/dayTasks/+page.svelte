@@ -60,25 +60,33 @@ class="text-3xl font-bold text-dark dark:text-white"
       <p
       class="text-slate-100 text-sm ml-2 font-bold"
       >{item.title}</p></div>
-      <div class="text-center">
-        <Button on:click={() => (hidden8 = false)}>See tasky</Button>
+      <div>
+        <div class="flex flex-row">
+          <Button on:click={() => (hidden8 = false)}
+            class="text-white hover:text-gray-500 text-sm ml-2 font-bold leading-snug transition-colors"
+            >
+          <Icon name="info-circle-solid" class=" text-white"  />
+          </Button>
+        
+        <Drawer placement="bottom" width="w-full" transitionType="fly" transitionParams={transitionParamsBottom} bind:hidden={hidden8} id="sidebar8">
+          <div class="flex items-center">
+            <h5 id="drawer-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
+             Tasky
+            </h5>
+            <CloseButton on:click={() => (hidden8 = true)} class="mb-4 dark:text-white" />
+          </div>
+          <p class="max-w-lg mb-6 text-sm text-gray-500 dark:text-gray-400">
+            {item.description}
+          </p>
+        </Drawer>      
+      <button
+      on:click={()=>handleClick(item.id)}
+      class="text-white hover:text-gray-500 text-sm ml-2 font-bold leading-snug transition-colors"
+      >Delete</button>
       </div>
-      <Drawer placement="bottom" width="w-full" transitionType="fly" transitionParams={transitionParamsBottom} bind:hidden={hidden8} id="sidebar8">
-        <div class="flex items-center">
-          <h5 id="drawer-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
-           Tasky
-          </h5>
-          <CloseButton on:click={() => (hidden8 = true)} class="mb-4 dark:text-white" />
-        </div>
-        <p class="max-w-lg mb-6 text-sm text-gray-500 dark:text-gray-400">
-          {item.description}
-        </p>
-      </Drawer>      
-    <button
-    on:click={()=>handleClick(item.id)}
-    class="text-white hover:text-gray-500 text-sm ml-2 font-bold leading-snug transition-colors"
-    >Delete</button>
   </div>
+  </div>
+  
   {/each  }
   {:else}
   <p class="text-white">No data</p>

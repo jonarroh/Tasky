@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import supabase from '../../supabase/client';
 import { randomUUID } from 'crypto';
 import type { RequestHandler } from './$types';
+import { clearCache } from '$lib/images/cache';
 
 export async function GET() {
 	const query = supabase
@@ -30,6 +31,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		console.log(error);
 		return json({ message: 'error' });
 	}
+
+	clearCache();
 
 	return json({ message: 'success', data });
 };

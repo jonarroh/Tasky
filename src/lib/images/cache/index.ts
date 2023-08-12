@@ -17,3 +17,7 @@ export function deleteCache(key: string) {
 export const isDataInCache = (key: string) => {
 	return cache.get(key) !== undefined;
 };
+
+export const clearCache = () => {
+	cache.clear();
+};
